@@ -128,10 +128,7 @@ app.post("/login", (req, res) => {
               expiresIn: "24h",
             });
             res
-              .cookie("token", token, {
-                maxAge: 60 * 60 * 24 * 1000,
-              })
-              .json({ ack: true, id: id, username: username });
+              .json({ ack: true, id: id, username: username, token: token });
           } else {
             res.json({ ack: false, message: "Wrong Credentials!" });
           }
