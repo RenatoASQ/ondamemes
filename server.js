@@ -21,6 +21,7 @@ const db = mysql.createConnection({
   host: "ondamemes.cpby2zv5jtag.eu-west-3.rds.amazonaws.com",
   user: "root",
   database: "ondamemes",
+  password: "ondamemes123",
 });
 const jwtSecret = "RenatoHenriqueMemePage";
 db.connect((error) => {
